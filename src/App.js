@@ -1,21 +1,12 @@
 import "./App.css";
-import { ItemList } from "./components/ItemList/ItemList";
+import { ItemListContainer } from "./components/ItemList/ItemListContainer";
 import { Navbar } from "./components/Nabvar/Navbar";
 
-
-
 function App() {
-
-  let saludo = "hola bienvenido"
-
-  return (
-    <div className="App">
-      <Navbar color="blue"/>
-      <ItemList saludo={saludo} />
-      
-      
-    </div>
-  );
+  return <div className="App">
+    <Navbar />
+    <ItemListContainer />
+  </div>;
 }
 
 export default App;
