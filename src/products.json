@@ -1,0 +1,8 @@
+[
+  { "id": 1, "linea": "Hair", "producto": "Romero", "precio": 1 },
+  { "id": 2, "linea": "Skin", "producto": "Tonico Facial", "precio": 8 },
+  { "id": 3, "linea": "Creme", "producto": "Jabon Exfoliante", "precio": 4 },
+  { "id": 4, "linea": "Relax", "producto": "Verbena", "precio": 9 },
+  { "id": 5, "linea": "Hair", "producto": "Nutrición", "precio": 4 },
+  { "id": 6, "linea": "Creme", "producto": "Estrias Celulitis", "precio": 7 }
+]

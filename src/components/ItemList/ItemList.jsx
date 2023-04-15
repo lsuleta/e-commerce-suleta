@@ -1,10 +1,9 @@
-import { Typography } from '@mui/material'
 import React from 'react'
 
-export const ItemList = ({saludo}) => {
+export const ItemList = ({product}) => {
   return (
     <div>
-        <Typography variant='h2'>{saludo}</Typography>
+      {product.producto} - ${product.precio} - {product.linea}
     </div>
   )
 }
