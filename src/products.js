@@ -1,0 +1,88 @@
+export const products = [
+  { id: 1, 
+    linea: "Hair", 
+    producto: "Romero", 
+    precio: 1000,
+    descripcion: "Shampoo solido aroma a romero",
+    img: "https://picsum.photos/400/400?random=1"
+  },
+  { id: 2, 
+    linea: "Hair", 
+    producto: "Coco", 
+    precio: 1000,
+    descripcion: "Shampoo solido aroma a coco",
+    img: "https://picsum.photos/400/400?random=2"
+ 
+  },
+  { id: 3, 
+    linea: "Hair", 
+    producto: "Cacao", 
+    precio: 1000,
+    descripcion: "Shampoo solido aroma a cacao",
+    img: "https://picsum.photos/400/400?random=3"
+  },
+  { id: 4, 
+    linea: "Skin", 
+    producto: "Tonico Facial", 
+    precio: 1000,
+    descripcion: "Crema facial tonificante",
+    img: "https://picsum.photos/400/400?random=4" 
+  },
+  { id: 5, 
+    linea: "Skin", 
+    producto: "Serum Vitamina C", 
+    precio: 1000,
+    descripcion: "Crema facial que estimula la produccion de colageno",
+    img: "https://picsum.photos/400/400?random=5"  
+  },
+  { id: 6, 
+    linea: "Skin", 
+    producto: "Contorno de Ojos", 
+    precio: 1000,
+    descripcion: "Crema facial que rellena lineas de expresión",
+    img: "https://picsum.photos/400/400?random=6"  
+  },
+  { id: 7, 
+    linea: "Creme", 
+    producto: "Crema Corporal Calendula", 
+    precio: 1000,
+    descripcion: "Crema corporal con aroma a calendula",
+    img: "https://picsum.photos/400/400?random=7" 
+  },
+  { id: 8, 
+    linea: "Creme", 
+    producto: "Jabon Exfoliante", 
+    precio: 1000,
+    descripcion: "Jabon solido que suaviza la piel",
+    img: "https://picsum.photos/400/400?random=8"  
+  },
+  { id: 9, 
+    linea: "Creme", 
+    producto: "Todo tipo de Pieles", 
+    precio: 1000,
+    descripcion: "Crema corporal para todo tipo de pieles",
+    img: "https://picsum.photos/400/400?random=9"  
+  },
+  { id: 10, 
+    linea: "Relax", 
+    producto: "Mango-Maracuya", 
+    precio: 1000,
+    descripcion: "Vela aromatica con aroma a mango-maracuya",
+    img: "https://picsum.photos/400/400?random=10" 
+  },
+  { id: 11, 
+    linea: "Relax", 
+    producto: "Naranja-Pimienta", 
+    precio: 1000,
+    descripcion: "Vela aromatica con aroma a naranja-pimienta",
+    img: "https://picsum.photos/400/400?random=11"  
+  },
+  { id: 12, 
+    linea: "Relax", 
+    producto: "Verbena", 
+    precio: 1000,
+    descripcion: "Difusor con aroma a Verbena",
+    img: "https://picsum.photos/400/400?random=12"  
+  },
+  
+]
