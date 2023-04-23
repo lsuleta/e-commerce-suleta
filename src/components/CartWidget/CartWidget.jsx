@@ -1,12 +1,13 @@
-import React from "react";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Typography from "@mui/material/Typography";
+import React from 'react'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-export const CartWidget = () => {
+const CartWidget = () => {
   return (
-    <div style={{ display: "flex" }}>
+    <div>
       <ShoppingCartIcon />
-      <Typography variant="subtitle2">0</Typography>
+      <span>0</span>
     </div>
-  );
-};
+  )
+}
+
+export default CartWidget

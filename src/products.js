@@ -1,88 +1,98 @@
 export const products = [
   { id: 1, 
-    linea: "Hair", 
-    producto: "Romero", 
+    categoria: "Hair", 
+    titulo: "Romero", 
     precio: 1000,
     descripcion: "Shampoo solido aroma a romero",
-    img: "https://picsum.photos/400/400?random=1"
+    img: "https://picsum.photos/400/400?random=1",
+    stock: 5
   },
   { id: 2, 
-    linea: "Hair", 
-    producto: "Coco", 
+    categoria: "Hair", 
+    titulo: "Coco", 
     precio: 1000,
     descripcion: "Shampoo solido aroma a coco",
-    img: "https://picsum.photos/400/400?random=2"
- 
+    img: "https://picsum.photos/400/400?random=2",
+    stock: 5
   },
   { id: 3, 
-    linea: "Hair", 
-    producto: "Cacao", 
+    categoria: "Hair", 
+    titulo: "Cacao", 
     precio: 1000,
     descripcion: "Shampoo solido aroma a cacao",
-    img: "https://picsum.photos/400/400?random=3"
+    img: "https://picsum.photos/400/400?random=3",
+    stock: 5
   },
   { id: 4, 
-    linea: "Skin", 
-    producto: "Tonico Facial", 
+    categoria: "Skin", 
+    titulo: "Tonico Facial", 
     precio: 1000,
     descripcion: "Crema facial tonificante",
-    img: "https://picsum.photos/400/400?random=4" 
+    img: "https://picsum.photos/400/400?random=4",
+    stock: 5 
   },
   { id: 5, 
-    linea: "Skin", 
-    producto: "Serum Vitamina C", 
+    categoria: "Skin", 
+    titulo: "Serum Vitamina C", 
     precio: 1000,
     descripcion: "Crema facial que estimula la produccion de colageno",
-    img: "https://picsum.photos/400/400?random=5"  
+    img: "https://picsum.photos/400/400?random=5",
+    stock: 5  
   },
   { id: 6, 
-    linea: "Skin", 
-    producto: "Contorno de Ojos", 
+    categoria: "Skin", 
+    titulo: "Contorno de Ojos", 
     precio: 1000,
     descripcion: "Crema facial que rellena lineas de expresión",
-    img: "https://picsum.photos/400/400?random=6"  
+    img: "https://picsum.photos/400/400?random=6",
+    stock: 5  
   },
   { id: 7, 
-    linea: "Creme", 
-    producto: "Crema Corporal Calendula", 
+    categoria: "Creme", 
+    titulo: "Crema Corporal Calendula", 
     precio: 1000,
     descripcion: "Crema corporal con aroma a calendula",
-    img: "https://picsum.photos/400/400?random=7" 
+    img: "https://picsum.photos/400/400?random=7",
+    stock: 5 
   },
   { id: 8, 
-    linea: "Creme", 
-    producto: "Jabon Exfoliante", 
+    categoria: "Creme", 
+    titulo: "Jabon Exfoliante", 
     precio: 1000,
     descripcion: "Jabon solido que suaviza la piel",
-    img: "https://picsum.photos/400/400?random=8"  
+    img: "https://picsum.photos/400/400?random=8",
+    stock: 5  
   },
   { id: 9, 
-    linea: "Creme", 
-    producto: "Todo tipo de Pieles", 
+    categoria: "Creme", 
+    titulo: "Todo tipo de Pieles", 
     precio: 1000,
     descripcion: "Crema corporal para todo tipo de pieles",
-    img: "https://picsum.photos/400/400?random=9"  
+    img: "https://picsum.photos/400/400?random=9",
+    stock: 5  
   },
   { id: 10, 
-    linea: "Relax", 
-    producto: "Mango-Maracuya", 
+    categoria: "Relax", 
+    titulo: "Mango-Maracuya", 
     precio: 1000,
     descripcion: "Vela aromatica con aroma a mango-maracuya",
-    img: "https://picsum.photos/400/400?random=10" 
+    img: "https://picsum.photos/400/400?random=10",
+    stock: 5 
   },
   { id: 11, 
-    linea: "Relax", 
-    producto: "Naranja-Pimienta", 
+    categoria: "Relax", 
+    titulo: "Naranja-Pimienta", 
     precio: 1000,
     descripcion: "Vela aromatica con aroma a naranja-pimienta",
-    img: "https://picsum.photos/400/400?random=11"  
+    img: "https://picsum.photos/400/400?random=11",
+    stock: 5  
   },
   { id: 12, 
-    linea: "Relax", 
-    producto: "Verbena", 
+    categoria: "Relax", 
+    titulo: "Verbena", 
     precio: 1000,
     descripcion: "Difusor con aroma a Verbena",
-    img: "https://picsum.photos/400/400?random=12"  
-  },
-  
+    img: "https://picsum.photos/400/400?random=12",
+    stock: 5  
+  }
 ]

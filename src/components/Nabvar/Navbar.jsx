@@ -1,27 +1,41 @@
-import * as React from "react";
-import Button from "@mui/material/Button";
-import { CartWidget } from "../CartWidget/CartWidget";
-import "./navbar.css"
-import { ProductsContext } from "../../App";
-import { lineas } from "../../App";
-export const Navbar = () => {
-  const {setFilter} = React.useContext(ProductsContext)
+import React from "react";
+import CartWidget from "../CartWidget/CartWidget";
+import { Box, Button, Grid } from "@mui/material";
 
+const Navbar = () => {
   return (
-      <div className="navbar-container">
-          <div >
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2} style={{ display: "flex", alignItems: "center" }}>
+        <Grid item xs={12} md={3} sx={{width: "120px", height: "120px"}}>
             <img
-              src="riccia.jpg"
+              style={{ objectFit: "scale-down", width: "100%", height: "100%" }}
+              src="https://res.cloudinary.com/dizrgzxfl/image/upload/v1680298055/riccia_omcfpf.jpg"
               alt="logo de la tienda"
             />
-          </div>
-          <div className="nav-links">
-            {lineas.map(linea=>{
-              return <Button onClick={()=> setFilter(linea)} key={linea} variant="contained">{linea}</Button>
-            })}
-          </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Button variant="text" size="large">
+            all
+          </Button>
+          <Button variant="text" size="large">
+            hair
+          </Button>
+          <Button variant="text" size="large">
+            skin
+          </Button>
+          <Button variant="text" size="large">
+            creme
+          </Button>
+          <Button variant="text" size="large">
+            relax
+          </Button>
+        </Grid>
+        <Grid item xs={12} md={3}>
           <CartWidget />
-      </div>
-      
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
+
+export default Navbar;
