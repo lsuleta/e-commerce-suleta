@@ -1,13 +1,23 @@
+import { Button } from "@mui/material";
 import React from "react";
 
-const Counter = ( {contador, sumar, restar} ) => {
-
+const Counter = ({ contador, sumar, restar }) => {
   return (
-    <div>
-      <h1>contador</h1>
-      <button onClick={sumar}>+</button>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "1rem",
+      }}
+    >
+      <Button size="small" color="primary" variant="contained" onClick={restar}>
+        -
+      </Button>
       <h3>{contador}</h3>
-      <button onClick={restar}>-</button>
+      <Button size="small" color="primary" variant="contained" onClick={sumar}>
+        +
+      </Button>
     </div>
   );
 };

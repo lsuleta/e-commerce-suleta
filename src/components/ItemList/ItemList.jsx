@@ -9,6 +9,8 @@ import {
 } from "@mui/material";
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 const ItemList = ({ items }) => {
   return (
     <div
@@ -18,13 +20,13 @@ const ItemList = ({ items }) => {
         flexWrap: "wrap",
         minHeight: "90vh",
         padding: "40px",
-        gap: "2rem"
+        gap: "2rem",
       }}
     >
       {items.map((item) => {
         return (
           <Card sx={{ width: 300 }} key={item.id}>
-            <CardActionArea sx={{height: 300}}>
+            <CardActionArea sx={{ height: 300 }}>
               <CardMedia
                 component="img"
                 height="140"
@@ -41,10 +43,14 @@ const ItemList = ({ items }) => {
                 </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions sx={{ justifyContent: "center", alignItems: "center" }}>
-              <Button size="small" color="primary" variant="contained">
-                Ver más
-              </Button>
+            <CardActions
+              sx={{ justifyContent: "center", alignItems: "center" }}
+            >
+              <Link to={`/itemDetail/${item.id}`}>
+                <Button size="small" color="primary" variant="contained">
+                  Ver más
+                </Button>
+              </Link>
             </CardActions>
           </Card>
         );

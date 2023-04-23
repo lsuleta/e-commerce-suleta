@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { products } from "../../products";
+import {useParams} from "react-router-dom";
 
 const ItemListContainer = () => {
 
   const [items, setItems] = useState([])
 
+  const {nombre} = useParams()
+
   useEffect(() => {
+    const productsFilter = products.filter(prod => prod.categoria === nombre)
+
     const tarea = new Promise((resolve, reject) => {
-      resolve(products);
+      resolve(nombre ? productsFilter : products);
     });
   
     tarea
@@ -18,7 +23,7 @@ const ItemListContainer = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [])
+  }, [nombre])
 
   return (
     <div>
