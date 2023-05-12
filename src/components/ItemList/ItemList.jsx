@@ -12,6 +12,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ItemList = ({ items }) => {
+
+  
+
   return (
     <div
       style={{
@@ -25,8 +28,8 @@ const ItemList = ({ items }) => {
     >
       {items.map((item) => {
         return (
-          <Card sx={{ width: 300 }} key={item.id}>
-            <CardActionArea sx={{ height: 300 }}>
+          <Card sx={{ width: 300, height: 350 }} key={item.id}>
+            <CardActionArea>
               <CardMedia
                 component="img"
                 height="140"

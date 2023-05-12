@@ -3,6 +3,9 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Box, Button, Grid } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 const Navbar = () => {
+
+  
+
   return (
     <Box>
       <Box sx={{ flexGrow: 1 }}>
