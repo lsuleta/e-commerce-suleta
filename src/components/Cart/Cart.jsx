@@ -1,24 +1,97 @@
-import { Button } from '@mui/material'
-import React from 'react'
+import { Box, Button, Grid, Typography } from "@mui/material";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Cart = ({cart, clearCart, deleteProductById, total}) => {
+const Cart = ({ cart, deleteProductById, total, clearCartAlert, navigate }) => {
   return (
     <div>
-      <h1>Carrito</h1>
-        {
-          cart.map(product => {
-            return <div key={product.id} style={{border: "2px solid black"}}>
-              <h3>{product.titulo}</h3>
-              <h4>{product.precio}</h4>
-              <h4>{product.quantity}</h4>
-              <Button size="small" color="primary" variant="contained" onClick={()=>deleteProductById(product.id)}>Eliminar</Button>
-            </div>
-          })
-        }
-        <Button onClick={clearCart} size="small" color="primary" variant="contained">Limpiar carrito</Button>
-        <h1>El total del carrito es: ${total}</h1>
-    </div>
-  )
-}
+      <Typography variant="h3" align="center">
+        Carrito
+      </Typography>
+      {cart.map((product) => {
+        return (
+          <Box sx={{ flexGrow: 1 }} key={product.id}>
+            <Grid
+              container
+              spacing={2}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Grid
+                item
+                xs={12}
+                md={4}
+                sx={{ width: "200px", height: "200px" }}
+              >
+                <img
+                  style={{
+                    objectFit: "scale-down",
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  src={product.img}
+                  alt={product.titulo}
+                />
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Typography variant="h5" align="center">
+                  {product.titulo}
+                </Typography>
+                <Typography variant="body2" align="center">
+                  ${product.precio}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ fontWeight: 700 }}
+                  align="center"
+                >
+                  Unidades: {product.quantity}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Button
+                  size="small"
+                  color="primary"
+                  variant="contained"
+                  onClick={() => deleteProductById(product.id)}
+                >
+                  Eliminar
+                </Button>
+              </Grid>
+            </Grid>
+          </Box>
+        );
+      })}
+      {cart.length > 0 ? (
+        <div style={{ display: "flex", justifyContent: "center", gap: 10 }}>
+          <Button
+            onClick={clearCartAlert}
+            size="small"
+            color="primary"
+            variant="contained"
+          >
+            Limpiar carrito
+          </Button>
+          <Button size="small" color="primary" variant="contained" onClick={() => navigate("/checkout")}>
+            Comprar
+          </Button>
+        </div>
+      ) : (
+        <Link to="/" style={{display: "flex", justifyContent: "center"}}>
+          <Button size="small" color="primary" variant="contained">
+            Faltan agregar productos
+          </Button>
+        </Link>
+      )}
 
-export default Cart
+      <Typography variant="h5" align="center">
+        El total del carrito es: ${total}
+      </Typography>
+    </div>
+  );
+};
+
+export default Cart;

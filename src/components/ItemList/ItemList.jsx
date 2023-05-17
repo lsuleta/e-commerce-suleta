@@ -37,11 +37,11 @@ const ItemList = ({ items }) => {
                 alt={item.titulo}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h5" component="div" align="center">
                   {item.titulo}
                 </Typography>
-                <Typography variant="body2">{item.descripcion}</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 700 }}>
+                <Typography variant="body2" align="center">{item.descripcion}</Typography>
+                <Typography variant="body2" sx={{ fontWeight: 700 }} align="center">
                   ${item.precio}
                 </Typography>
               </CardContent>

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import { Box, Button, Grid } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 const Navbar = () => {
 
-  
+  const {cart} = useContext(CartContext)
 
   return (
     <Box>
@@ -55,7 +56,9 @@ const Navbar = () => {
             </Link>
           </Grid>
           <Grid item xs={12} md={3}>
-            <CartWidget />
+            {
+              cart.length > 0 && <CartWidget />
+            }
           </Grid>
         </Grid>
       </Box>

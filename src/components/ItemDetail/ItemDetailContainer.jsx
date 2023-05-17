@@ -1,18 +1,25 @@
 import React, { useContext, useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-import { products } from "../../products";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
+import Swal from 'sweetalert2'
+import { db } from "../../firebaseConfig";
+import {getDoc, collection, doc} from "firebase/firestore"
+
 const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const [product, setProduct] = useState({});
 
-  const {agregarAlCarrito} = useContext(CartContext)
+  const {cart, agregarAlCarrito, getQuantityById} = useContext(CartContext)
 
   useEffect(() => {
-    let encontrar = products.find((prod) => prod.id === +id);
-    setProduct(encontrar);
+    const itemCollection = collection(db, "products")
+    const refDoc = doc(itemCollection, id)
+    getDoc(refDoc).then(res => setProduct({
+      ...res.data(),
+      id: res.id
+    })).catch(err => console.log(err))
   }, [id]);
 
   const onAdd = (cantidad) => {
@@ -21,9 +28,18 @@ const ItemDetailContainer = () => {
       quantity: cantidad,
     };
     agregarAlCarrito(data)
-    // console.log(`se agregaron al carrito ${cantidad} cantidad/es`);
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Se agregó correctamente',
+      showConfirmButton: true,
+      timer: 1500
+    })
   };
-  return <ItemDetail product={product} onAdd={onAdd} />;
+
+  let cantidadTotal = getQuantityById(product.id)
+
+  return <ItemDetail product={product} onAdd={onAdd} cantidadTotal={cantidadTotal} cart={cart} />;
 };
 
 export default ItemDetailContainer;
